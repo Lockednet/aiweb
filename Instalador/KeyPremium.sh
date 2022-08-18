@@ -341,7 +341,7 @@ chave=$(curl -sSL "raw.githubusercontent.com/WebPremiumAI/aiweb/Premium/Instalad
 
 read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
     
-         if [[ "$key" = "$chave" ]]
+         if [[ "$key" != "$chave" ]]
           then
                echo -e "[*] VALIDANDO A CHAVE DE INSTALAÇÃO"
                 sleep 2
