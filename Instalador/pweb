@@ -122,12 +122,12 @@ fun_atpweb () {
 [[ ! -d /bin/ppweb ]] && mkdir /bin/ppweb
 cd /bin/ppweb || exit
 rm *.sh verpweb > /dev/null 2>&1
-wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/verifatt.sh > /dev/null 2>&1
-wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/verpweb > /dev/null 2>&1
+wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh > /dev/null 2>&1
+wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verpweb > /dev/null 2>&1
 chmod 777 *.sh > /dev/null 2>&1
 cd /bin || exit
 rm pweb > /dev/null 2>&1
-wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/pweb > /dev/null 2>&1
+wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/pweb > /dev/null 2>&1
 chmod 777 pweb > /dev/null 2>&1
 cd || exit
 cat /dev/null > ~/.bash_history && history -c
@@ -192,7 +192,7 @@ fun_tst () {
 if [ -e "/usr/bin/testevelocidade" ]; then
 testevelocidade --share > speed
 else
-wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/speedtest-cli -O testevelocidade
+wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/speedtest-cli -O testevelocidade
 chmod +x testevelocidade
 mv testevelocidade /usr/bin/testevelocidade
 testevelocidade --share > speed
@@ -232,7 +232,7 @@ painel_att () {
 clear
 cd /bin/ppweb || exit
 rm verweb > /dev/null 2>&1
-wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/verweb > /dev/null 2>&1
+wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verweb > /dev/null 2>&1
 cd || exit
 echo ""
 echo -e "           \033[1;33m● \033[1;32mATUALIZANDO LINUX, PODE DEMORAR \033[1;33m●\033[0m"
@@ -272,7 +272,7 @@ find /var/www/html/ -iname "*.jpg" -type f -exec rm -rfv {} \; > /dev/null 2>&1
 find /var/www/html/ -iname "*.png" -type f -exec rm -rfv {} \; > /dev/null 2>&1
 find /var/www/html/ -iname "*.png" -type f -exec rm -rfv {} \; > /dev/null 2>&1
 find /var/www/html/ -iname "*.lock" -type f -exec rm -rfv {} \; > /dev/null 2>&1
-wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/gestorssh.zip > /dev/null 2>&1
+wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/gestorssh.zip > /dev/null 2>&1
 sleep 2
 unzip -o gestorssh.zip > /dev/null 2>&1
 rm -rf gestorssh.zip index.html bdgestorssh.sql > /dev/null 2>&1
@@ -448,8 +448,8 @@ clear
 screen -r -S "bot_painel" -X quit > /dev/null 2>&1
 screen -wipe 1>/dev/null 2>/dev/null
 sleep 2
-wget -qO- https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/apibot -O /bin/ppweb/apibot > /dev/null 2>&1
-wget -qO- https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/bot -O /bin/ppweb/bot > /dev/null 2>&1
+wget -qO- https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/apibot -O /bin/ppweb/apibot > /dev/null 2>&1
+wget -qO- https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/bot -O /bin/ppweb/bot > /dev/null 2>&1
 chmod 777 -R /bin/ppweb > /dev/null 2>&1
 cd $HOME || exit
 echo ""
@@ -499,7 +499,7 @@ exit 1
 executarBot(){
 clear
 banner
-chave=$(curl -sSL "raw.githubusercontent.com/WebPremiumAI/aiweb2/Premium/Instalador/chave") &>/dev/null
+chave=$(curl -sSL "raw.githubusercontent.com/Posseidon2022/aiweb/Premium/Instalador/chave") &>/dev/null
 key=$(cat /bin/ppweb/botpag/chave_inst) &>/dev/null
 if [[ "$key" = "$chave" ]]
 then
@@ -525,7 +525,7 @@ fi
 verificar_chave(){
 clear
 banner
-chave=$(curl -sSL "raw.githubusercontent.com/WebPremiumAI/aiweb2/Premium/Instalador/chave") &>/dev/null
+chave=$(curl -sSL "raw.githubusercontent.com/Posseidon2022/aiweb/Premium/Instalador/chave") &>/dev/null
 if [[ ! -f /bin/ppweb/botpag/chave_inst ]]
 then
 read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
@@ -558,7 +558,7 @@ fi
 }
 prepararAmbiente(){
 rm /bin/ppweb/botpag/* &>/dev/null
-wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/botpag.zip &>/dev/null
+wget https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/botpag.zip &>/dev/null
 unzip botpag.zip &>/dev/null
 rm botpag.zip &>/dev/null
 [[ -d /bin/ppweb/botpag ]] || mkdir /bin/ppweb/botpag &>/dev/null
@@ -678,8 +678,8 @@ clear
 echo -e "\033[1;32mATIVANDO BOT HELP \033[0m\n"
 fun_bot1() {
 [[ ! -e "/bin/ppweb/bot" ]] && {
-wget -qO- https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/apibot -O /bin/ppweb/apibot > /dev/null 2>&1
-wget -qO- https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/verifatt.sh/bot -O /bin/ppweb/bot > /dev/null 2>&1
+wget -qO- https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/apibot -O /bin/ppweb/apibot > /dev/null 2>&1
+wget -qO- https://github.com/Posseidon2022/aiweb/raw/Premium/Instalador/bot -O /bin/ppweb/bot > /dev/null 2>&1
 chmod 777 -R /bin/ppweb > /dev/null 2>&1
 }
 cd /bin/ppweb
@@ -765,9 +765,6 @@ echo ""
 sleep 4s
 shutdown -r now > /dev/null
 }
-sincroniza_ssh () {
-mysql -u root -p
-}
 remove_script () {
 clear
 echo -e "\033[1;37m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m"
@@ -781,7 +778,7 @@ clear
 echo -e "VERIFICANDO SE SUA INSTALAÇÃO É PREMIUM...." |lolcat
 sleep 2
 IP=$(wget -qO- ipv4.icanhazip.com)
-chave=$(curl -sSL "raw.githubusercontent.com/WebPremiumAI/aiweb2/Premium/Instalador/chave" | grep  -o $IP )  &>/dev/null
+chave=$(curl -sSL "raw.githubusercontent.com/Posseidon2022/aiweb/Premium/Instalador/chave" | grep  -o $IP )  &>/dev/null
          if [[ "$chave" = "$IP" ]]
           then
                 echo -e "PARABÉNS! SUA INSTALAÇÃO É UMA VERSÃO 🏆 PREMIUM"
@@ -1200,7 +1197,7 @@ echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━�
 echo -ne "\033[1;37m┗━┫\033[1;32mO QUE DESEJA FAZER \033[1;31m? "; read -r x
 case "$x" in
 R | R)
-sincroniza_ssh
+remove_script
 exit;
 ;;
 1 | 01)
