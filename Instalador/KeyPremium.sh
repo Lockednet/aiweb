@@ -338,7 +338,7 @@ echo -e "PAINEL WEB A.I" | figlet
 echo -e "\033[1;37m               ❌ INSTALAÇÃO BLOQUEADA PELO DESENVOLVEDOR!\033[38;5;197m\033[38;5;197m\033[1;37m"
 echo -e "\033[1;37m 🔑 USE A CHAVE GRATUITA ➡️ PainelA.I-FREE ⬅️ OU COMPRE UMA CHAVE PREMIUM!\033[38;5;197m\033[38;5;197m\033[1;37m"
 echo ""
-chave=$(curl -sSL "raw.githubusercontent.com/Posseidon2022/aiweb/Premium/Instalador/chave" | grep  -o $IP )  &>/dev/null
+chave=$(curl -sSL "raw.githubusercontent.com/Posseidon2022/aiweb/Premium/Instalador/chave")  &>/dev/null
 read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
 
 
