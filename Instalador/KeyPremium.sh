@@ -344,7 +344,7 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
 
 
     
-         if [[ "$chave" != "$key" ]]
+         if [[ "$chave" = "$key" ]]
           then
                 echo -e "[*] VALIDANDO A SUA INSTALAÇÃO"
                 sleep 2
